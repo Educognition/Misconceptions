@@ -1,0 +1,392 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700;900&family=Inter:wght@300;400;500;600;700&display=swap');
+
+/* Color System */
+:root {
+  --bg-dark: #0B0F19;
+  --bg-deep: #06080F;
+  --bg-panel: #111827;
+  --bg-card: #1F2937;
+  --bg-modal: #111827;
+  
+  /* Domain Highlight Colors */
+  --biology-color: #06B6D4; /* Cyan */
+  --physics-color: #8B5CF6; /* Violet */
+  --zoology-color: #10B981; /* Emerald */
+  --history-color: #F59E0B; /* Amber */
+  
+  --biology-dim: rgba(6, 182, 212, 0.1);
+  --physics-dim: rgba(139, 92, 246, 0.1);
+  --zoology-dim: rgba(16, 185, 129, 0.1);
+  --history-dim: rgba(245, 158, 11, 0.1);
+  
+  --biology-glow: 0 4px 20px rgba(6, 182, 212, 0.15);
+  --physics-glow: 0 4px 20px rgba(139, 92, 246, 0.15);
+  --zoology-glow: 0 4px 20px rgba(16, 185, 129, 0.15);
+  --history-glow: 0 4px 20px rgba(245, 158, 11, 0.15);
+
+  --font-header: 'Orbitron', sans-serif;
+  --font-sans: 'Inter', sans-serif;
+}
+
+/* Global Reset (Rounded Borders Prohibited) */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  border-radius: 0 !important; /* STRICT GEOMETRY: No rounded borders */
+}
+
+body {
+  background-color: var(--bg-dark);
+  color: #F3F4F6;
+  font-family: var(--font-sans);
+  min-height: 100vh;
+  overflow-x: hidden;
+  line-height: 1.6;
+}
+
+/* Clean Background Grid (Subtle and readable, no flicker) */
+.subtle-grid {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -2;
+  background-image: 
+    linear-gradient(rgba(255, 255, 255, 0.02) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.02) 1px, transparent 1px);
+  background-size: 50px 50px;
+  pointer-events: none;
+}
+
+.subtle-gradient {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  background: radial-gradient(circle at top right, rgba(17, 24, 39, 0.8) 0%, var(--bg-dark) 100%);
+  pointer-events: none;
+}
+
+/* Custom Scrollbar (Sharp Corners) */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: var(--bg-deep);
+}
+::-webkit-scrollbar-thumb {
+  background: #374151;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #4B5563;
+}
+
+/* Typography */
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-header);
+  font-weight: 700;
+  letter-spacing: 0.03em;
+}
+
+p {
+  color: #9CA3AF;
+}
+
+/* View Container Transitions */
+.view-container {
+  transition: opacity 0.25s ease-in-out, transform 0.25s ease-in-out;
+}
+
+.hidden-view {
+  display: none !important;
+  opacity: 0;
+  transform: translateY(10px);
+}
+
+/* Navigation Title Styles */
+.app-title {
+  font-weight: 900;
+  background: linear-gradient(135deg, #FFF 0%, #9CA3AF 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Large Category Cards (View 1 Selector Panels) */
+.cat-card {
+  background-color: var(--bg-panel);
+  border: 1px solid #374151;
+  border-top: 4px solid #4B5563;
+  padding: 2.5rem 2rem;
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+}
+
+/* Hover scales slightly and adds category glowing highlights */
+.cat-card:hover {
+  transform: translateY(-4px);
+  border-color: var(--theme-color, #FFF);
+  box-shadow: var(--theme-glow, none);
+  background-color: #1F2937;
+}
+
+/* Bind theme variables dynamically to category panels */
+.cat-card[data-cat="biology"] {
+  --theme-color: var(--biology-color);
+  --theme-glow: var(--biology-glow);
+  border-top-color: var(--biology-color);
+}
+.cat-card[data-cat="physics"] {
+  --theme-color: var(--physics-color);
+  --theme-glow: var(--physics-glow);
+  border-top-color: var(--physics-color);
+}
+.cat-card[data-cat="zoology"] {
+  --theme-color: var(--zoology-color);
+  --theme-glow: var(--zoology-glow);
+  border-top-color: var(--zoology-color);
+}
+.cat-card[data-cat="history"] {
+  --theme-color: var(--history-color);
+  --theme-glow: var(--history-glow);
+  border-top-color: var(--history-color);
+}
+
+/* Category Large Icon */
+.cat-icon-container {
+  width: 70px;
+  height: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(255, 255, 255, 0.03);
+  border: 1px solid #374151;
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+  transition: all 0.3s ease;
+}
+
+.cat-card:hover .cat-icon-container {
+  background-color: var(--theme-dim);
+  border-color: var(--theme-color);
+  color: var(--theme-color);
+}
+
+.cat-card[data-cat="biology"] .cat-icon-container { color: var(--biology-color); --theme-dim: var(--biology-dim); }
+.cat-card[data-cat="physics"] .cat-icon-container { color: var(--physics-color); --theme-dim: var(--physics-dim); }
+.cat-card[data-cat="zoology"] .cat-icon-container { color: var(--zoology-color); --theme-dim: var(--zoology-dim); }
+.cat-card[data-cat="history"] .cat-icon-container { color: var(--history-color); --theme-dim: var(--history-dim); }
+
+/* Progress indicator on category selectors */
+.cat-progress-bar-bg {
+  height: 4px;
+  background-color: #374151;
+  width: 100%;
+  margin-top: 1.5rem;
+}
+.cat-progress-bar-fill {
+  height: 100%;
+  width: 0%;
+  transition: width 0.4s ease;
+}
+.cat-card[data-cat="biology"] .cat-progress-bar-fill { background-color: var(--biology-color); }
+.cat-card[data-cat="physics"] .cat-progress-bar-fill { background-color: var(--physics-color); }
+.cat-card[data-cat="zoology"] .cat-progress-bar-fill { background-color: var(--zoology-color); }
+.cat-card[data-cat="history"] .cat-progress-bar-fill { background-color: var(--history-color); }
+
+/* Misconception Grid Cards (View 2 list) */
+.item-card {
+  background-color: var(--bg-panel);
+  border: 1px solid #1F2937;
+  padding: 1.5rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.item-card:hover {
+  background-color: #1F2937;
+  border-color: #4B5563;
+}
+
+/* Debunked item cards fading */
+.item-card.debunked {
+  opacity: 0.65;
+  border-left: 3px solid var(--zoology-color) !important;
+}
+
+/* Category indicator border-left rules */
+.item-card[data-category="Human Biology & Medicine"] { border-left: 3px solid var(--biology-color); }
+.item-card[data-category="Astronomy & Physics"] { border-left: 3px solid var(--physics-color); }
+.item-card[data-category="Zoology & Natural World"] { border-left: 3px solid var(--zoology-color); }
+.item-card[data-category="History & Human Thought"] { border-left: 3px solid var(--history-color); }
+
+/* UI Buttons (Sharp polygonal layout via clip-path) */
+.panel-btn {
+  background-color: transparent;
+  color: #FFF;
+  border: 1px solid #4B5563;
+  padding: 0.5rem 1.2rem;
+  font-family: var(--font-header);
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  clip-path: polygon(0 0, 100% 0, 100% calc(100% - 8px), calc(100% - 8px) 100%, 0 100%);
+}
+
+.panel-btn:hover {
+  background-color: #1F2937;
+  border-color: #D1D5DB;
+}
+
+/* Highlighted Action Buttons */
+.panel-btn-action {
+  border-color: var(--biology-color);
+  background-color: var(--biology-dim);
+  color: var(--biology-color);
+}
+.panel-btn-action:hover {
+  background-color: var(--biology-color);
+  color: #000;
+}
+
+.panel-btn-danger {
+  border-color: #EF4444;
+  background-color: rgba(239, 68, 68, 0.1);
+  color: #EF4444;
+}
+.panel-btn-danger:hover {
+  background-color: #EF4444;
+  color: #000;
+}
+
+.panel-btn-success {
+  border-color: var(--zoology-color);
+  background-color: var(--zoology-dim);
+  color: var(--zoology-color);
+}
+.panel-btn-success:hover {
+  background-color: var(--zoology-color);
+  color: #000;
+}
+
+/* Badges */
+.status-badge {
+  font-family: var(--font-header);
+  font-size: 0.65rem;
+  padding: 0.2rem 0.6rem;
+  border: 1px solid #4B5563;
+  font-weight: bold;
+}
+
+/* Clean Text Inputs */
+.search-input-field {
+  background-color: #06080F;
+  border: 1px solid #374151;
+  color: #FFF;
+  font-size: 0.875rem;
+  padding: 0.5rem 1rem;
+  outline: none;
+  width: 100%;
+}
+
+.search-input-field:focus {
+  border-color: #4B5563;
+  background-color: #111827;
+}
+
+/* Modal Window Layout */
+.modal-overlay-view {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(6, 8, 15, 0.85);
+  backdrop-filter: blur(5px);
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.2s ease;
+}
+
+.modal-overlay-view.active {
+  opacity: 1;
+  pointer-events: all;
+}
+
+.modal-content-panel {
+  background-color: var(--bg-modal);
+  border: 1px solid #374151;
+  width: 90%;
+  max-width: 720px;
+  max-height: 90vh;
+  overflow-y: auto;
+  position: relative;
+  z-index: 101;
+  transform: translateY(20px);
+  transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+  clip-path: polygon(0 0, calc(100% - 20px) 0, 100% 20px, 100% 100%, 20px 100%, 0 calc(100% - 20px));
+}
+
+.modal-overlay-view.active .modal-content-panel {
+  transform: translateY(0);
+}
+
+/* Modal Inner Splits (Myth vs Science Panels) */
+.comparative-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1px;
+  background-color: #374151;
+}
+
+.comparative-myth-side {
+  background-color: rgba(239, 68, 68, 0.03);
+  padding: 1.5rem;
+}
+
+.comparative-science-side {
+  background-color: rgba(16, 185, 129, 0.03);
+  padding: 1.5rem;
+}
+
+/* Category specific colors */
+.theme-text-biology { color: var(--biology-color) !important; }
+.theme-text-physics { color: var(--physics-color) !important; }
+.theme-text-zoology { color: var(--zoology-color) !important; }
+.theme-text-history { color: var(--history-color) !important; }
+
+/* Interactive Particle Canvas (Opacity lowered to prevent visual clutter) */
+#cyber-canvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -3;
+  opacity: 0.35;
+  pointer-events: none;
+}
+
+/* Global Progress Dashboard header */
+.global-stats-header {
+  border: 1px solid #1F2937;
+  background-color: #111827;
+  padding: 1rem 1.5rem;
+}
+
+@media (max-width: 640px) {
+  .comparative-grid {
+    grid-template-columns: 1fr;
+  }
+}

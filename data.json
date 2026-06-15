@@ -1,0 +1,578 @@
+[
+  {
+    "id": 1,
+    "category": "Human Biology & Medicine",
+    "title": "The 10% Brain Myth",
+    "icon": "fa-dna",
+    "myth": "The belief that humans only utilize a small fraction of their brain matter.",
+    "origin": "Common cultural misunderstanding and sensory illusion.",
+    "science": "Neuroimaging (fMRI) shows that virtually 100% of the brain is active across a 24-hour cycle, even during deep sleep."
+  },
+  {
+    "id": 2,
+    "category": "Human Biology & Medicine",
+    "title": "The Left-Brain vs. Right-Brain Personality",
+    "icon": "fa-dna",
+    "myth": "The idea that logical people use their left hemisphere and creative people use their right.",
+    "origin": "Common cultural misunderstanding and sensory illusion.",
+    "science": "While some functions are lateralized, complex tasks like creative writing or mathematics require massive, real-time communication across both hemispheres via the corpus callosum."
+  },
+  {
+    "id": 3,
+    "category": "Human Biology & Medicine",
+    "title": "The Five Senses",
+    "icon": "fa-dna",
+    "myth": "The teaching that humans possess only sight, hearing, taste, touch, and smell.",
+    "origin": "Common cultural misunderstanding and sensory illusion.",
+    "science": "Neurobiologists count between 9 and 21+ senses, including proprioception (awareness of body parts in space), equilibrioception (balance), and thermoception (temperature)."
+  },
+  {
+    "id": 4,
+    "category": "Human Biology & Medicine",
+    "title": "The Discrete Tongue Map",
+    "icon": "fa-dna",
+    "myth": "The classic textbook diagram showing distinct zones for sweet, salty, sour, and bitter.",
+    "origin": "Common cultural misunderstanding and sensory illusion.",
+    "science": "All taste qualities can be detected across any part of the tongue that contains taste buds; variations in sensitivity across the surface are biologically negligible."
+  },
+  {
+    "id": 5,
+    "category": "Human Biology & Medicine",
+    "title": "Brain Cells Don't Regenerate in Adults",
+    "icon": "fa-dna",
+    "myth": "The belief that you are born with a fixed number of neurons that only decrease over time.",
+    "origin": "Common cultural misunderstanding and sensory illusion.",
+    "science": "Neurogenesis (the creation of new brain cells) has been proven to actively continue throughout adulthood, particularly within the hippocampus."
+  },
+  {
+    "id": 6,
+    "category": "Human Biology & Medicine",
+    "title": "Hair and Nails Grow After Death",
+    "icon": "fa-dna",
+    "myth": "The appearance of lengthening hair and fingernails on a corpse.",
+    "origin": "Common cultural misunderstanding and sensory illusion.",
+    "science": "This is an optical illusion caused by dehydration; as the skin dries, it shrinks and recedes, exposing hair follicles and nail beds that were previously hidden."
+  },
+  {
+    "id": 7,
+    "category": "Human Biology & Medicine",
+    "title": "Shaving Makes Hair Grow Back Thicker",
+    "icon": "fa-dna",
+    "myth": "The belief that cutting hair alters its biological structure at the root.",
+    "origin": "Common cultural misunderstanding and sensory illusion.",
+    "science": "Shaving simply cuts the hair at the skin level, leaving a blunt, flat tip instead of a naturally tapered edge, making the initial regrowth feel coarser."
+  },
+  {
+    "id": 8,
+    "category": "Human Biology & Medicine",
+    "title": "Sugar Causes Child Hyperactivity",
+    "icon": "fa-dna",
+    "myth": "The deeply held belief that sugar consumption triggers a physical spike in child behavior.",
+    "origin": "The effect is largely psychological expectation; parents who believe their child drank sugar rate their behavior as hyperactive even when given a placebo.",
+    "science": "Double-blind controlled studies show no statistical change in behavior due to sugar."
+  },
+  {
+    "id": 9,
+    "category": "Human Biology & Medicine",
+    "title": "Cracking Knuckles Causes Arthritis",
+    "icon": "fa-dna",
+    "myth": "The idea that popping your joints damages the cartilage.",
+    "origin": "Long-term studies tracking serial knuckle-crackers show no correlation with osteoarthritis.",
+    "science": "The sound is caused by the sudden collapse of gas bubbles popping inside the synovial fluid of the joint."
+  },
+  {
+    "id": 10,
+    "category": "Human Biology & Medicine",
+    "title": "Alcohol Keeps You Warm",
+    "icon": "fa-dna",
+    "myth": "The \"beer jacket\" phenomenon.",
+    "origin": "While this makes you feel flush and hot, it actually draws vital heat away from your core organs, increasing the risk of hypothermia.",
+    "science": "Alcohol is a vasodilator, meaning it causes warm blood to rush to the surface of your skin."
+  },
+  {
+    "id": 11,
+    "category": "Human Biology & Medicine",
+    "title": "You Lose 90% of Your Body Heat Through Your Head",
+    "icon": "fa-dna",
+    "myth": "The military-survival guide myth.",
+    "origin": "The myth originated from a flawed 1950s military study where test subjects wore cold-weather gear but left their heads completely bare.",
+    "science": "You lose heat from your head at roughly the same rate per square inch as any other exposed part of the human body."
+  },
+  {
+    "id": 12,
+    "category": "Human Biology & Medicine",
+    "title": "Drinking 8 Glasses of Water a Day",
+    "icon": "fa-dna",
+    "myth": "The universal hydration rule.",
+    "origin": "The human body obtains the vast majority of its necessary daily hydration through standard meals, fruits, vegetables, and other routine beverages like tea or coffee.",
+    "science": "There is no clinical evidence backing a strict \"8x8\" rule."
+  },
+  {
+    "id": 13,
+    "category": "Human Biology & Medicine",
+    "title": "MSG Causes Headaches (\"Chinese Restaurant Syndrome\")",
+    "icon": "fa-dna",
+    "myth": "The belief that monosodium glutamate triggers immediate neurological symptoms.",
+    "origin": "MSG is chemically identical to the natural glutamates found in abundance in tomatoes and parmesan cheese.",
+    "science": "Decades of double-blind testing have failed to establish a reproducible link between standard dietary amounts of MSG and headaches."
+  },
+  {
+    "id": 14,
+    "category": "Human Biology & Medicine",
+    "title": "Toads Give Humans Warts",
+    "icon": "fa-dna",
+    "myth": "The childhood warning.",
+    "origin": "The bumps on a toad's skin are simply specialized glandular structures containing secretions, not viral infections transmissible to primates.",
+    "science": "Warts on human skin are caused exclusively by human papillomaviruses (HPV), which are entirely specific to humans."
+  },
+  {
+    "id": 15,
+    "category": "Human Biology & Medicine",
+    "title": "We Only Use One Side of our Nostrils at a Time",
+    "icon": "fa-dna",
+    "myth": "The belief that we breathe equally out of both nostrils all day.",
+    "origin": "This rotates every few hours to allow different scent molecules (which travel at different speeds) to be captured accurately.",
+    "science": "In reality, humans experience the nasal cycle. Autonomic nervous system shifts cause erectile tissue in one nostril to swell, severely restricting airflow while the other side opens up."
+  },
+  {
+    "id": 16,
+    "category": "Human Biology & Medicine",
+    "title": "Organic Food Uses No Pesticides",
+    "icon": "fa-dna",
+    "myth": "The belief that \"certified organic\" means a crop was grown completely free of chemical sprays.",
+    "origin": "Organic farmers routinely use naturally derived pesticides and copper-based fungicides, which can sometimes require higher application rates than target-specific synthetic options.",
+    "science": "Organic farming simply restricts synthetic chemicals."
+  },
+  {
+    "id": 17,
+    "category": "Human Biology & Medicine",
+    "title": "You Need to Wait 30 Minutes to Swim After Eating",
+    "icon": "fa-dna",
+    "myth": "The parental warning that digesting food diverts so much blood to your stomach that your limbs will cramp and cause you to drown.",
+    "origin": "Common cultural misunderstanding and sensory illusion.",
+    "science": "While digestion does slightly alter blood flow, there is no physiological evidence or statistical tracking linking swimming immediately after a meal to increased drowning risk or severe muscle cramping."
+  },
+  {
+    "id": 18,
+    "category": "Human Biology & Medicine",
+    "title": "Oxygenated Water / Hydrogen Peroxide for Wounds",
+    "icon": "fa-dna",
+    "myth": "The absolute reflex to pour bubbling hydrogen peroxide onto a scrape to disinfect it.",
+    "origin": "Common cultural misunderstanding and sensory illusion.",
+    "science": "While it kills bacteria, hydrogen peroxide is entirely non-selective; it destroys the healthy, newly forming skin cells (fibroblasts) and capillary tissue trying to heal the wound, which actually delays recovery and increases scarring."
+  },
+  {
+    "id": 19,
+    "category": "Astronomy & Physics",
+    "title": "The Earth's Seasons and Distance to the Sun",
+    "icon": "fa-user-astronaut",
+    "myth": "The idea that summer occurs because the Earth is physically closer to the sun in its elliptical orbit.",
+    "origin": "Southern Hemispheres.",
+    "science": "Earth's orbit is nearly circular. The seasons are caused entirely by the 23.5° axial tilt of the planet, which alters the angle and concentration of solar radiation hitting the Northern vs."
+  },
+  {
+    "id": 20,
+    "category": "Astronomy & Physics",
+    "title": "Zero Gravity in Space",
+    "icon": "fa-user-astronaut",
+    "myth": "The belief that astronauts float on the International Space Station because they are outside of Earth's gravitational reach.",
+    "origin": "Astronauts float because they are in a perpetual state of free fall—moving forward at such a high velocity (~27,600 km/h) that they constantly fall around the curve of the Earth.",
+    "science": "Gravity on the ISS is actually at about 90% of its strength on the ground."
+  },
+  {
+    "id": 21,
+    "category": "Astronomy & Physics",
+    "title": "Black Holes are Giant Spatial Vacuum Cleaners",
+    "icon": "fa-user-astronaut",
+    "myth": "The belief that black holes actively pull surrounding matter into themselves from infinite distances.",
+    "origin": "If our Sun were replaced by a black hole of the exact same mass, Earth would not get sucked in; it would continue orbiting it exactly as it does now, though it would get very cold.",
+    "science": "Black holes obey standard gravitational laws."
+  },
+  {
+    "id": 22,
+    "category": "Astronomy & Physics",
+    "title": "The \"Dark Side\" of the Moon",
+    "icon": "fa-user-astronaut",
+    "myth": "The belief that one half of the moon lives in permanent pitch-black darkness.",
+    "origin": "The \"far side\" experiences daytime just as often as the near side.",
+    "science": "The moon is tidally locked to Earth, meaning we only ever see one face of it. However, as the moon orbits Earth, all sides of it receive sunlight equally over a lunar month."
+  },
+  {
+    "id": 23,
+    "category": "Astronomy & Physics",
+    "title": "Meteors are Burning Hot When They Hit Earth",
+    "icon": "fa-user-astronaut",
+    "myth": "The belief that a freshly landed meteorite will scorch the ground or burn your hand.",
+    "origin": "Because space rocks have spent billions of years at near absolute zero, the interior remains freezing cold, often causing frost to form on a newly landed meteorite.",
+    "science": "While the exterior undergoes intense frictional heating (ablation) during its rapid atmospheric entry, the trip lasts only seconds."
+  },
+  {
+    "id": 24,
+    "category": "Astronomy & Physics",
+    "title": "The Coriolis Effect Controls Toilet Flushes",
+    "icon": "fa-user-astronaut",
+    "myth": "The belief that water drains clockwise in the Northern Hemisphere and counter-clockwise in the Southern Hemisphere due to Earth's rotation.",
+    "origin": "The direction water spins down a household toilet or sink is determined strictly by the manufactured shape of the bowl and the direction of the water jets.",
+    "science": "The Coriolis force is incredibly weak on small scales."
+  },
+  {
+    "id": 25,
+    "category": "Astronomy & Physics",
+    "title": "Lightning Never Strikes the Same Place Twice",
+    "icon": "fa-user-astronaut",
+    "myth": "The classic folk idiom.",
+    "origin": "The Empire State Building, for instance, is struck by lightning an average of 25 times every year.",
+    "science": "Lightning is simply an electrostatic discharge seeking the path of least resistance to the ground. Tall, conductive structures alter the local electrical field significantly."
+  },
+  {
+    "id": 26,
+    "category": "Astronomy & Physics",
+    "title": "A Penny Dropped from a Skyscraper Can Kill a Pedestrian",
+    "icon": "fa-user-astronaut",
+    "myth": "The urban physics legend.",
+    "origin": "If it hits a person below, it will sting, but it lacks the kinetic energy to fracture a skull.",
+    "science": "Due to air resistance, a flat, light object like a copper penny reaches its terminal velocity (maximum falling speed) after just 15 meters, topping out at roughly 40–50 mph."
+  },
+  {
+    "id": 27,
+    "category": "Astronomy & Physics",
+    "title": "Clouds are Floating Water Vapor",
+    "icon": "fa-user-astronaut",
+    "myth": "The assumption that clouds are made of gas.",
+    "origin": "Clouds are actually massive suspensions of liquid water droplets or solid ice crystals that are light enough to be kept aloft by thermal updrafts.",
+    "science": "Water vapor is completely invisible to the human eye."
+  },
+  {
+    "id": 28,
+    "category": "Astronomy & Physics",
+    "title": "Sound Can Travel Through Space",
+    "icon": "fa-user-astronaut",
+    "myth": "The trope popularized by sci-fi movies.",
+    "origin": "Because space is a near-vacuum with vast distances between atoms, sound waves cannot propagate.",
+    "science": "Sound is a mechanical wave that requires a physical medium (gas, liquid, or solid) to compress and travel through."
+  },
+  {
+    "id": 29,
+    "category": "Astronomy & Physics",
+    "title": "Glass is a Slow-Flowing Liquid",
+    "icon": "fa-user-astronaut",
+    "myth": "The myth used to explain why the window panes in centuries-old medieval cathedrals are noticeably thicker at the bottom than the top.",
+    "origin": "The unevenness of antique glass panes was a defect of the historical \"crown glass\" manufacturing process, and builders intentionally placed the heavier, thicker edge at the bottom for structural stability.",
+    "science": "Glass is an amorphous solid."
+  },
+  {
+    "id": 30,
+    "category": "Astronomy & Physics",
+    "title": "Boiling Water Bubbles are Air/Oxygen",
+    "icon": "fa-user-astronaut",
+    "myth": "The belief that heating water coaxes dissolved air out of the liquid state.",
+    "origin": "Common cultural misunderstanding and sensory illusion.",
+    "science": "The initial tiny bubbles that form at low temperatures are indeed dissolved gases escaping, but once water reaches a rolling boil, the massive rising bubbles consist entirely of gaseous water vapor ($H_2O$), which condenses back into liquid as soon as it meets cooler air."
+  },
+  {
+    "id": 31,
+    "category": "Astronomy & Physics",
+    "title": "Salt Makes Water Boil Significantly Faster",
+    "icon": "fa-user-astronaut",
+    "myth": "The kitchen shortcut.",
+    "origin": "Standard cooking quantities make a completely negligible difference.",
+    "science": "While adding salt does technically alter the properties of water (ebullioscopy), you would need to add an industrial, unpalatable amount of salt to change the boiling point by even one full degree Celsius."
+  },
+  {
+    "id": 32,
+    "category": "Astronomy & Physics",
+    "title": "The Sun is Yellow",
+    "icon": "fa-user-astronaut",
+    "myth": "The standard color crayon depiction.",
+    "origin": "It appears yellow or orange to our eyes on Earth only because our atmosphere scatters shorter blue wavelengths of light away (Rayleigh scattering).",
+    "science": "The sun emits light across all wavelengths of the visible spectrum relatively evenly, which makes its true light output pure white."
+  },
+  {
+    "id": 33,
+    "category": "Astronomy & Physics",
+    "title": "The Big Bang was an Explosion in Space",
+    "icon": "fa-user-astronaut",
+    "myth": "The mental image of a massive cosmic bomb exploding at a specific central point and blasting matter outward into an empty void.",
+    "origin": "Every single point in the universe expanded simultaneously; there is no \"center\" where the expansion started.",
+    "science": "The Big Bang was not an explosion in space; it was the rapid expansion of space itself."
+  },
+  {
+    "id": 34,
+    "category": "Astronomy & Physics",
+    "title": "Sunsets Look Red Because the Sun Cools Down",
+    "icon": "fa-user-astronaut",
+    "myth": "The intuitive assumption that the sun shifts to a red-orange color at night because it changes its energy output.",
+    "origin": "The color shift is entirely due to atmospheric depth: when the sun is on the horizon, its light travels through up to ten times more atmospheric gas, scattering out almost all the short blue wavelengths and leaving only the long, resilient red wavelengths to reach your eyes.",
+    "science": "The sun’s output remains identical."
+  },
+  {
+    "id": 35,
+    "category": "Astronomy & Physics",
+    "title": "Diamonds Form from Compressed Coal",
+    "icon": "fa-user-astronaut",
+    "myth": "The classic geology trope that diamonds are just highly compressed, ancient coal beds.",
+    "origin": "Diamonds are pure carbon trapped in the mantle, whereas coal is an impure sedimentary rock formed from decayed plant matter.",
+    "science": "Most diamonds found today formed deep within the Earth's mantle billions of years ago—long before the first land plants even evolved to create coal."
+  },
+  {
+    "id": 36,
+    "category": "Astronomy & Physics",
+    "title": "Sound Waves Travel Faster in Air than in Solids",
+    "icon": "fa-user-astronaut",
+    "myth": "The belief that because solids are dense, sound waves get blocked or slowed down by them.",
+    "origin": "Because atoms in a solid (like a steel rail or concrete wall) are tightly packed and highly elastic compared to loose gas molecules in the air, sound travels roughly 15 times faster through steel than it does through the air.",
+    "science": "Mechanical waves require atomic collisions to travel."
+  },
+  {
+    "id": 37,
+    "category": "Astronomy & Physics",
+    "title": "Microwaves Cook Food From the Inside Out",
+    "icon": "fa-user-astronaut",
+    "myth": "The belief that microwave radiation magically bypasses the surface of food to heat the core first.",
+    "origin": "The core of thick food items is cooked entirely via standard thermal conduction (heat moving inward from the outer layers).",
+    "science": "Microwave radio frequencies ($2.45\\text{ GHz}$) target water molecules, sugars, and fats, but they can only penetrate food to a depth of about 1 to 2 centimeters."
+  },
+  {
+    "id": 38,
+    "category": "Zoology & Natural World",
+    "title": "Chameleons Change Color for Camouflage",
+    "icon": "fa-paw",
+    "myth": "The belief that chameleons adjust their skin patterns to hide from predators by copying their background.",
+    "origin": "They shift their colors primarily via specialized nanocrystals to regulate their internal body temperature or to signal social intentions (such as aggression, fear, or a desire to mate) to other chameleons.",
+    "science": "Chameleons are already naturally camouflaged."
+  },
+  {
+    "id": 39,
+    "category": "Zoology & Natural World",
+    "title": "Goldfish Have a 3-Second Memory",
+    "icon": "fa-paw",
+    "myth": "The classic insult to fish intelligence.",
+    "origin": "They can be trained to navigate complex mazes, remember visual cues, and associate specific sounds with feeding schedules over long periods.",
+    "science": "Behavioral biologists have proven that goldfish have memory spans lasting up to five months."
+  },
+  {
+    "id": 40,
+    "category": "Zoology & Natural World",
+    "title": "Mice Prefer Cheese Over All Food",
+    "icon": "fa-paw",
+    "myth": "The cartoon trope.",
+    "origin": "They generally actively avoid foods with pungent, sharp odors like aged cheeses, preferring high-sugar or high-carb alternatives.",
+    "science": "Mice are granivores and structural foragers; their natural diets consist of seeds, grains, sweet fruits, and insects."
+  },
+  {
+    "id": 41,
+    "category": "Zoology & Natural World",
+    "title": "Sharks Don't Get Cancer",
+    "icon": "fa-paw",
+    "myth": "The myth popularized in the 1990s that led to the devastating over-harvesting of shark cartilage pills.",
+    "origin": "Common cultural misunderstanding and sensory illusion.",
+    "science": "Sharks do get cancer; scientists have documented both benign and malignant tumors across dozens of shark species, including skin and cartilage cancers."
+  },
+  {
+    "id": 42,
+    "category": "Zoology & Natural World",
+    "title": "Bulls Hate the Color Red",
+    "icon": "fa-paw",
+    "myth": "The belief that the red cape (muleta) drives the bull into a blind rage.",
+    "origin": "The bull is reacting purely to the aggressive, whipping motion of the fabric and the perceived physical threat of the matador's stance.",
+    "science": "Cattle are red-green colorblind."
+  },
+  {
+    "id": 43,
+    "category": "Zoology & Natural World",
+    "title": "Mother Birds Abandon Babies Touched by Humans",
+    "icon": "fa-paw",
+    "myth": "The warning given to children who find fallen nestlings.",
+    "origin": "If you find a featherless nestling, placing it gently back into its nest will not cause the mother to reject it.",
+    "science": "Most birds have an incredibly primitive, weak sense of smell and cannot detect a faint human scent on their young."
+  },
+  {
+    "id": 44,
+    "category": "Zoology & Natural World",
+    "title": "Houseflies Live for Only 24 Hours",
+    "icon": "fa-paw",
+    "myth": "The short-lifecycle assumption.",
+    "origin": "The 24-hour myth is a case of mistaken identity, confused with the mayfly, which does indeed have an adult lifespan ranging from a few hours to a couple of days.",
+    "science": "The common housefly (Musca domestica) typically lives in the wild for 2 to 4 weeks, and can even hibernate through cold winters."
+  },
+  {
+    "id": 45,
+    "category": "Zoology & Natural World",
+    "title": "Bumblebees Defy the Laws of Physics",
+    "icon": "fa-paw",
+    "myth": "The inspirational quote claiming aerodynamic models prove bees shouldn't fly.",
+    "origin": "High-speed video analysis reveals that bees fly using a highly complex dynamic system of rapid, sweeping wing strokes that create mini-vortices (low-pressure air pockets), effectively pulling them upward.",
+    "science": "This claim comes from a crude 1930s calculation that treated bee wings as rigid, fixed airplane wings."
+  },
+  {
+    "id": 46,
+    "category": "Zoology & Natural World",
+    "title": "Evolution is a Straight Line of Progress",
+    "icon": "fa-paw",
+    "myth": "The iconic image of an ape slowly straightening up until it becomes a modern human.",
+    "origin": "It operates as a highly chaotic, branching bush where mutations occur randomly, and species simply adapt to their immediate, shifting local environments or go extinct.",
+    "science": "Evolution does not have a predetermined goal or an upward ladder of perfection."
+  },
+  {
+    "id": 47,
+    "category": "Zoology & Natural World",
+    "title": "Earthworms Become Two Worms When Cut",
+    "icon": "fa-paw",
+    "myth": "The playground belief about worm regeneration.",
+    "origin": "The remaining tail section cannot grow a new head and will inevitably die.",
+    "science": "Only the front half of an earthworm containing the vital organs (like the heart and brain structures) has a chance of surviving and regenerating a tail if severed behind the clitellum."
+  },
+  {
+    "id": 48,
+    "category": "Zoology & Natural World",
+    "title": "Ostrich Head-Burying",
+    "icon": "fa-paw",
+    "myth": "The universal symbol for denial.",
+    "origin": "From a distance, it simply looks like their head has vanished.",
+    "science": "Ostriches do not bury their heads in the sand when threatened. If they cannot run away from danger, they drop their bodies low to the ground and press their long necks flat against the earth to blend in with the landscape."
+  },
+  {
+    "id": 49,
+    "category": "Zoology & Natural World",
+    "title": "Dogs See Only in Black and White",
+    "icon": "fa-paw",
+    "myth": "The assumption that dogs live in a completely grayscale world.",
+    "origin": "A dog's vision is very similar to a human with red-green colorblindness; they see the world in shades of blue, yellow, and gray.",
+    "science": "Dogs are dichromats, meaning they possess two types of color-receptors (cones) in their eyes, compared to a human's three."
+  },
+  {
+    "id": 50,
+    "category": "Zoology & Natural World",
+    "title": "Porcupines Can Shoot Their Quills",
+    "icon": "fa-paw",
+    "myth": "The cartoon defense mechanism where a porcupine fires sharp needles like darts at a predator.",
+    "origin": "They are loosely attached at the base, meaning a predator must make physical contact with the porcupine for the barbed quills to pull free and stick into their skin.",
+    "science": "Porcupine quills are just modified hairs and cannot be launched or detached voluntarily at a distance."
+  },
+  {
+    "id": 51,
+    "category": "Zoology & Natural World",
+    "title": "Bats are Blind",
+    "icon": "fa-paw",
+    "myth": "The common idiom \"blind as a bat.\" While bats rely heavily on echolocation (sonar) to navigate and hunt insects in total pitch-black darkness, all species of bats have fully functional eyes and visual systems.",
+    "origin": "Common cultural misunderstanding and sensory illusion.",
+    "science": "Many larger fruit bats actually have exceptional night vision that surpasses human capabilities."
+  },
+  {
+    "id": 52,
+    "category": "History & Human Thought",
+    "title": "People in Columbus's Time Thought the Earth Was Flat",
+    "icon": "fa-landmark",
+    "myth": "The belief that Christopher Columbus had to prove the world was round to a skeptical public.",
+    "origin": "The actual debate in 1492 was about the circumference of the globe; Columbus drastically underestimated its size, and would have starved at sea if he hadn't accidentally hit the Americas.",
+    "science": "Educated Europeans, sailors, and theologians had known the Earth was a sphere since the time of ancient Greece (thanks to Eratosthenes' mathematical measurements)."
+  },
+  {
+    "id": 53,
+    "category": "History & Human Thought",
+    "title": "Vikings Wore Horned Helmets",
+    "icon": "fa-landmark",
+    "myth": "The definitive image of Norse warriors.",
+    "origin": "The image was completely invented in the 19th century by costume designers (most notably Carl Emil Doepler for Wagner's Ring Cycle opera) to make the characters look more dramatic and primitive.",
+    "science": "There is zero archaeological or historical evidence of Vikings wearing horned helmets into battle."
+  },
+  {
+    "id": 54,
+    "category": "History & Human Thought",
+    "title": "The Salem Witch Trials Burned Victims at the Stake",
+    "icon": "fa-landmark",
+    "myth": "The common depiction of colonial American hysteria.",
+    "origin": "Nineteen victims were hanged, and one was pressed to death with heavy stones; burning was a practice reserved for heresy trials in continental Europe.",
+    "science": "No one was burned at the stake during the Salem trials in 1692. Under English law used in the colony, witchcraft was a felony punishable by hanging."
+  },
+  {
+    "id": 55,
+    "category": "History & Human Thought",
+    "title": "Napoleon Bonaparte Was Exceptionally Short",
+    "icon": "fa-landmark",
+    "myth": "The \"Napoleon Complex\" archetype.",
+    "origin": "The myth was fueled by British wartime caricatures and a misunderstanding of the units.",
+    "science": "At the time of his death, Napoleon measured roughly 5 feet 2 inches in French feet. However, French inches were longer than British inches. In modern standard measurements, Napoleon was 5 feet 7 inches tall, which was entirely average for a European man in the early 19th century."
+  },
+  {
+    "id": 56,
+    "category": "History & Human Thought",
+    "title": "The Vomitorium Was a Room for Roman Bingeing",
+    "icon": "fa-landmark",
+    "myth": "The belief that wealthy Romans built dedicated rooms next to banquet tables to vomit so they could keep eating.",
+    "origin": "Common cultural misunderstanding and sensory illusion.",
+    "science": "In architectural history, a vomitorium is simply the name for the massive, wide exit tunnels in Roman amphitheaters and stadiums designed to allow crowds to rapidly exit (\"spew forth\") from the venue at the end of an event."
+  },
+  {
+    "id": 57,
+    "category": "History & Human Thought",
+    "title": "The Iron Maiden Was a Real Medieval Torture Device",
+    "icon": "fa-landmark",
+    "myth": "The iconic spiked sarcophagus.",
+    "origin": "They are 19th-century fabrications created by showmen who pieced together disparate historical artifacts to create shocking, sensational museum displays designed to make modern viewers feel superior to \"barbaric\" ancestors.",
+    "science": "No iron maidens existed during the Middle Ages."
+  },
+  {
+    "id": 58,
+    "category": "History & Human Thought",
+    "title": "Albert Einstein Failed School Mathematics",
+    "icon": "fa-landmark",
+    "myth": "The encouraging story told to struggling students.",
+    "origin": "The myth spread because the grading system at his Swiss school inverted its scale the year he attended, turning the lowest numeric grade into the highest, which confused later biographers looking at his report card.",
+    "science": "Einstein was an exceptional mathematician from a very young age. By age 15, he had completely mastered differential and integral calculus."
+  },
+  {
+    "id": 59,
+    "category": "History & Human Thought",
+    "title": "The 1929 Wall Street Crash Caused Mass Suicides",
+    "icon": "fa-landmark",
+    "myth": "The image of hundreds of bankrupt stockbrokers jumping out of skyscraper windows.",
+    "origin": "The myth was born out of sensationalized, satirical newspaper reports that were later repeated as sober historical facts.",
+    "science": "While the economic devastation was real, the suicide rate in Manhattan actually dropped in the immediate days following Black Tuesday."
+  },
+  {
+    "id": 60,
+    "category": "History & Human Thought",
+    "title": "Julius Caesar Was Born Via C-Section",
+    "icon": "fa-landmark",
+    "myth": "The etymological legend behind the Caesarean section surgery.",
+    "origin": "The name likely stems from a Roman ancestor whose name derived from the Latin caesus (meaning \"to cut\").",
+    "science": "While the surgical procedure existed in ancient Rome, it was performed only on deceased mothers in an absolute last-resort attempt to save the infant, because the surgery was completely fatal to the mother. Caesar's mother, Aurelia Cotta, lived for decades after his birth, proving he was born naturally."
+  },
+  {
+    "id": 61,
+    "category": "History & Human Thought",
+    "title": "The Great Wall of China is Visible from Space",
+    "icon": "fa-landmark",
+    "myth": "The textbook claim.",
+    "origin": "Because it is only a few meters wide, spotting it from low Earth orbit without magnification is the visual equivalent of trying to see a human hair from a distance of several miles.",
+    "science": "The Great Wall is constructed from local stones and soil that perfectly match the color of the surrounding landscape."
+  },
+  {
+    "id": 62,
+    "category": "History & Human Thought",
+    "title": "People in the Middle Ages Died at Age 30",
+    "icon": "fa-landmark",
+    "myth": "The misinterpretation of historical average life expectancy data.",
+    "origin": "If a medieval child managed to survive to the age of 12, their structural life expectancy immediately jumped to standard modern ranges.",
+    "science": "People regularly lived into their 60s, 70s, and 80s during the medieval era. The average life expectancy statistic was dragged down to 30 or 35 entirely by an incredibly high infant mortality rate."
+  },
+  {
+    "id": 63,
+    "category": "History & Human Thought",
+    "title": "Marie Antoinette Said \"Let Them Eat Cake\"",
+    "icon": "fa-landmark",
+    "myth": "The ultimate symbol of aristocratic ignorance during the French Revolution.",
+    "origin": "It was a well-known piece of anti-royal folklore long before she ever set foot in France.",
+    "science": "The phrase “Qu’ils mangent de la brioche” first appeared in Jean-Jacques Rousseau's autobiography, written when Marie Antoinette was only 9 years old and still living in Austria."
+  },
+  {
+    "id": 64,
+    "category": "History & Human Thought",
+    "title": "Iron Suits Left Medieval Knights Completely Immobilized",
+    "icon": "fa-landmark",
+    "myth": "The image of a knight falling over like a turtle and being unable to get back up without a crane.",
+    "origin": "The weight was distributed evenly across the skeleton, allowing knights to run, jump, mount horses unassisted, and easily stand back up if knocked down.",
+    "science": "A custom-fitted suit of plate armor weighed roughly 40 to 50 pounds, which is lighter than the modern gear carried by active combat firefighters or infantry soldiers."
+  }
+]

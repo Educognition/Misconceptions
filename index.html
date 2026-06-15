@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Misconception Explorer - Educational Dashboard</title>
+  <!-- SEO Meta Tags -->
+  <meta name="description" content="An interactive educational platform designed for students to explore, analyze, and debunk 64 widespread scientific and historical misconceptions.">
+  <meta name="keywords" content="misconception explorer, educational dashboard, classroom science, history myths">
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            themeDark: '#0B0F19',
+            themeDeep: '#06080F',
+            themePanel: '#111827',
+            themeCard: '#1F2937',
+            biology: '#06B6D4',
+            physics: '#8B5CF6',
+            zoology: '#10B981',
+            history: '#F59E0B'
+          }
+        }
+      }
+    }
+  </script>
+  <!-- FontAwesome Free Icons CDN -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <!-- Clean High-Readability Stylesheet -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="bg-themeDark text-slate-100 min-h-screen relative">
+
+  <!-- Interactive Subtle Particle Background -->
+  <canvas id="cyber-canvas"></canvas>
+  <div class="subtle-grid"></div>
+  <div class="subtle-gradient"></div>
+
+  <!-- Primary Wrapper Container -->
+  <div class="container mx-auto px-4 py-8 max-w-6xl relative z-10">
+
+    <!-- GLOBAL HEADER & PROGRESS CONSOLE -->
+    <header class="global-stats-header mb-8">
+      <div class="flex flex-col md:flex-row justify-between items-start md:items-center gap-6">
+        <div>
+          <span class="inline-block px-2 py-0.5 bg-gray-800 border border-gray-700 text-slate-400 text-[10px] font-mono tracking-widest uppercase mb-1">
+            Student Learning Platform
+          </span>
+          <h1 class="text-xl md:text-2xl font-black text-white uppercase tracking-wider app-title">
+            Misconception Explorer
+          </h1>
+        </div>
+
+        <!-- Global Dashboard Statistics -->
+        <div class="w-full md:w-80 font-mono text-xs">
+          <div class="flex justify-between items-center mb-1 text-slate-400">
+            <span class="uppercase tracking-wider text-[10px]">TOTAL DEBUNKED PROGRESS</span>
+            <span id="progress-percent" class="text-emerald-400 font-bold">0%</span>
+          </div>
+          
+          <!-- Progress rail -->
+          <div class="progress-rail mb-2">
+            <div id="progress-bar" class="progress-bar" style="width: 0%;"></div>
+          </div>
+          
+          <div class="flex justify-between items-center pt-1 text-slate-500 text-[10px]">
+            <span>DEBUNKED: <span id="debunked-counter" class="text-white font-bold">0</span> / <span id="total-counter" class="text-slate-400">64</span></span>
+            <span>MASTERY: <span id="category-mastery" class="text-white font-bold">0/4</span> DOMAINS</span>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- VIEW 1: CATEGORY SELECTION (LANDING SCREEN) -->
+    <section id="categories-view" class="view-container">
+      <div class="mb-8 max-w-2xl">
+        <h2 class="text-lg md:text-xl font-bold text-white mb-2 uppercase tracking-wide">Select a Learning Domain</h2>
+        <p class="text-slate-400 text-sm leading-relaxed">
+          Welcome to the Misconception Explorer. Many things we accept as facts are actually myths. 
+          Choose a category below to investigate the origins and scientific truths of 64 common misconceptions.
+        </p>
+      </div>
+
+      <!-- Category selection cards grid -->
+      <div id="categories-grid" class="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <!-- Rendered dynamically by app.js -->
+        <div class="col-span-full py-12 text-center text-slate-500 font-mono">
+          <i class="fas fa-spinner fa-spin text-2xl mb-2 text-slate-400"></i>
+          <p>LOADING LEARNING DOMAINS...</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- VIEW 2: DOMAIN EXPLORER (GRID LIST VIEW) -->
+    <section id="explorer-view" class="view-container hidden-view">
+      
+      <!-- Back button and domain header -->
+      <div class="border border-gray-800 bg-themePanel p-6 mb-6">
+        <button id="back-to-categories" class="panel-btn mb-4">
+          <i class="fas fa-arrow-left mr-2"></i> Back to Domains
+        </button>
+        
+        <div class="flex items-start gap-4">
+          <div class="text-3xl mt-1">
+            <i id="explorer-category-icon" class="fas fa-dna"></i>
+          </div>
+          <div>
+            <h2 id="explorer-category-title" class="text-lg md:text-xl font-bold text-white uppercase tracking-wide">Category Title</h2>
+            <p id="explorer-category-desc" class="text-slate-400 text-sm leading-relaxed mt-1">
+              Category descriptions go here.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Search & Filters Toolbar -->
+      <div class="border border-gray-800 bg-themePanel p-6 mb-6 flex flex-col md:flex-row justify-between gap-4">
+        <!-- Search input -->
+        <div class="relative flex-grow max-w-md">
+          <span class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none text-slate-500 text-xs">
+            <i class="fas fa-search"></i>
+          </span>
+          <input 
+            type="text" 
+            id="search-input" 
+            placeholder="Search within this domain..." 
+            class="search-input-field pl-9"
+          >
+        </div>
+
+        <!-- Completion filters -->
+        <div class="flex border border-gray-800 bg-themeDeep p-1 font-mono text-xs self-start h-10">
+          <button data-progress-filter="all" class="px-4 py-1.5 transition-all duration-150 bg-gray-700 text-white font-bold">
+            ALL MYTHS
+          </button>
+          <button data-progress-filter="remaining" class="px-4 py-1.5 transition-all duration-150 bg-transparent text-gray-400 hover:text-white font-bold">
+            ACTIVE
+          </button>
+          <button data-progress-filter="debunked" class="px-4 py-1.5 transition-all duration-150 bg-transparent text-gray-400 hover:text-white font-bold">
+            DEBUNKED
+          </button>
+        </div>
+      </div>
+
+      <!-- Misconception Item Cards -->
+      <div id="cards-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <!-- Injected dynamically by app.js -->
+      </div>
+    </section>
+
+    <!-- FOOTER ZONE -->
+    <footer class="mt-12 border-t border-gray-800 pt-6 text-center text-slate-600 font-mono text-[10px] tracking-wider">
+      <p>EDUCATIONAL CURRICULUM EXPLORER // SECURE SESSION PROGRESSION</p>
+      <p class="mt-0.5">OPTIMIZED FOR GITHUB PAGES DEPLOYMENT // ALL RIGHTS RESERVED 2026</p>
+    </footer>
+
+  </div>
+
+  <!-- DETAILS INVESTIGATION MODAL WINDOW -->
+  <div id="cyber-modal" class="modal-overlay-view">
+    <div class="modal-content-panel">
+      
+      <!-- Close icon top-right -->
+      <button 
+        id="modal-close" 
+        class="absolute top-4 right-4 text-slate-400 hover:text-white transition-colors duration-150 z-10 text-lg"
+        aria-label="Close modal"
+      >
+        <i class="fas fa-times"></i>
+      </button>
+
+      <div class="p-6 md:p-8">
+        <!-- Category label -->
+        <span id="modal-category" class="font-mono text-xs uppercase tracking-widest">CATEGORY</span>
+        
+        <!-- Misconception title -->
+        <h3 id="modal-title" class="text-lg md:text-xl text-white font-bold mb-6 tracking-wide mt-1">Title of Misconception</h3>
+
+        <!-- Comparative split grid (Myth vs Science) -->
+        <div class="comparative-grid mb-6 border border-gray-700">
+          <div class="comparative-myth-side">
+            <h4 class="font-mono text-[10px] text-red-400 uppercase tracking-widest mb-2 font-bold">
+              <i class="fas fa-times-circle mr-1 text-red-500"></i> Common Myth
+            </h4>
+            <p id="modal-myth-text" class="text-slate-200 text-sm leading-relaxed font-medium">
+              The common myth description goes here.
+            </p>
+          </div>
+          <div class="comparative-science-side">
+            <h4 class="font-mono text-[10px] text-emerald-400 uppercase tracking-widest mb-2 font-bold">
+              <i class="fas fa-check-circle mr-1 text-emerald-500"></i> Scientific Fact
+            </h4>
+            <p id="modal-science-text" class="text-slate-200 text-sm leading-relaxed font-medium">
+              The real science explanation goes here.
+            </p>
+          </div>
+        </div>
+
+        <!-- Belief Origin block -->
+        <div class="border border-gray-700 bg-themeDeep p-4 mb-6">
+          <h4 class="font-mono text-[10px] text-amber-500 uppercase tracking-widest mb-1 font-bold">
+            <i class="fas fa-history mr-1 text-amber-500"></i> Origin of Belief
+          </h4>
+          <p id="modal-origin-text" class="text-slate-400 text-sm leading-relaxed">
+            Explanation of why this myth started or persists.
+          </p>
+        </div>
+
+        <!-- Action panel footer -->
+        <div class="flex flex-col md:flex-row justify-between items-center gap-4 pt-4 border-t border-gray-800 font-mono">
+          <div class="text-[10px] text-slate-500 uppercase tracking-wider text-center md:text-left">
+            <span>Tracking progress updates your category dashboard</span>
+          </div>
+          <div class="flex gap-3 w-full md:w-auto">
+            <button id="modal-action-btn" class="panel-btn panel-btn-success w-full md:w-auto text-xs">
+              <i class="fas fa-check-double mr-2"></i> DEBUNK MYTH
+            </button>
+            <button id="modal-close-btn" class="panel-btn panel-btn-danger w-full md:w-auto text-xs">
+              CLOSE PANEL
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Defer app script execution -->
+  <script src="app.js" defer></script>
+</body>
+</html>
