@@ -330,7 +330,7 @@
     "icon": "fa-user-astronaut",
     "myth": "The belief that microwave radiation magically bypasses the surface of food to heat the core first.",
     "origin": "The core of thick food items is cooked entirely via standard thermal conduction (heat moving inward from the outer layers).",
-    "science": "Microwave radio frequencies ($2.45\\text{ GHz}$) target water molecules, sugars, and fats, but they can only penetrate food to a depth of about 1 to 2 centimeters."
+    "science": "Microwave radio frequencies target water molecules, sugars, and fats, but they can only penetrate food to a depth of about 1 to 2 centimeters."
   },
   {
     "id": 38,
